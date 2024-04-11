@@ -2,7 +2,8 @@ name: build
 on: workflow_dispatch
 jobs:
   first-step:
+    # name: ${{ vars.JOB_BUILD_NAME }}
     runs-on: ubuntu-latest
     steps:
       - name: my-step
-        run: echo "Empieza el build"
+        run: echo "${{ vars.JOB_BUILD_NAME }}"
