@@ -1,0 +1,8 @@
+name: build
+on: workflow_dispatch
+jobs:
+  first-step:
+    runs-on: ubuntu-latest
+    steps:
+      - name: my-step
+        run: echo "Empieza el build"
