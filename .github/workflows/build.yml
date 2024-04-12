@@ -15,7 +15,7 @@ jobs:
             echo "Your version of GO is: "
             go version
   second_job :
-    runs-on: ubuntu
+    runs-on: ubuntu-latest
     steps:
       - name: Install Python
         uses: actions/setup-python@v5.1.0 
