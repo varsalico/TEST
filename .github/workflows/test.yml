@@ -10,3 +10,4 @@ jobs:
         run: |
           ls -lah
           echo "perro" > log.txt
+          ls -lah
