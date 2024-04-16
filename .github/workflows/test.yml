@@ -4,5 +4,9 @@ jobs:
   my-job:
     runs-on: ubuntu-latest
     steps:
-      - name: my-step
-        run: echo "Hello World!"
+      - name: Checkout - Test files repo
+        uses: actions/checkout@v4.1.2
+      - name: List
+        run: |
+          ls -lah
+          echo "perro" > log.txt
