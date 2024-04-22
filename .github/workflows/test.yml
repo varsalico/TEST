@@ -16,5 +16,9 @@ jobs:
       - name: Tarea
         run: |
           ls -lah
+          echo "Imprime contenido de: ."
           cat test.js
+          echo "Imprime contenido de: tokens/"
+          cat tokens/test.js
+          echo "Imprime contenido de: tokens/token_one/"
           cat tokens/token_one/test.js
