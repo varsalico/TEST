@@ -1,1 +1,1 @@
-#{  }#
+#{ ASPNETCORE_URLS }#
