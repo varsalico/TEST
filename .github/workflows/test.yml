@@ -1,13 +1,18 @@
 name: Test
 on: workflow_dispatch
 jobs:
-  my-job:
+  Test-To-Run:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout - Test files repo
         uses: actions/checkout@v4.1.2
-      - name: List
+      - uses: cschleiden/replace-tokens@v1
+        with:
+          files: '["*.js"]'
+        env:
+          ConnectionStrings__DataContext: connect
+          ASPNETCORE_URLS: asp
+      - name: Tarea
         run: |
           ls -lah
-          echo "perro" > log.txt
-          ls -lah
+          cat test.js
