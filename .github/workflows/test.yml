@@ -8,8 +8,8 @@ jobs:
         uses: actions/checkout@v4.1.2
       - uses: cschleiden/replace-tokens@v1
         with:
-          # files: '["*.js"]' | reemplaza el archivo que encuentra el la ubicación actual.
-          files: '["**/*.js"]'
+          files: '["*.js"]' # reemplaza el archivo que encuentra el la ubicación actual.
+          # files: '["**/*.js"]' # reemplaza todos los archivos que encuentre.
         env:
           ConnectionStrings__DataContext: connect
           ASPNETCORE_URLS: asp
