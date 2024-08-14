@@ -13,6 +13,8 @@ jobs:
           url: url
           my_secret: ${{ secrets.secret }}
       - name: Tarea
+        env:
+          my_secret: ${{ secrets.MY_SECRET }
         run: |
           ls -lah
           echo "Imprime contenido de: ."
