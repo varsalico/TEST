@@ -11,7 +11,7 @@ jobs:
           files: '["**/*.js"]' # reemplaza todos los archivos que encuentre.
         env:
           url: url
-          secret: secret
+          my_secret: ${{ secrets.secret }}
       - name: Tarea
         run: |
           ls -lah
@@ -21,3 +21,4 @@ jobs:
           cat tokens/test.js
           echo "Imprime contenido de: tokens/token_one/"
           cat tokens/token_one/test.js
+          echo "El valor del secret es $my_secret"
