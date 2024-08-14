@@ -10,7 +10,7 @@ jobs:
         with:
           files: '["**/*.js"]' # reemplaza todos los archivos que encuentre.
         env:
-          url: url
+          url: ${{ vars.JOB_BUILD_NAME }}
       - name: Tarea
         env:
           my_secret: ${{ secrets.MY_SECRET }}
